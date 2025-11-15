@@ -1,0 +1,67 @@
+.fightArea {
+    display: flex;
+    gap: 20px;
+}
+
+#char, #monster {
+    flex: 1;
+}
+
+.lifebar {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.lifebar .bar {
+    height: inherit;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.log {
+    border: 1px solid #999;
+    height: 200px;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 5px;
+}
+
+.log li.hero {
+    color: #8b0000; 
+}
+
+.log li.monster {
+    color: #4b0082; 
+}
+
+.log li.system {
+    color: #000000; 
+}
+
+.hidden {
+    display: none;
+}
+
+#selectionScreen {
+    text-align: center;
+    padding: 20px;
+}
+
+.selectionButtons button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.char-image-container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#charImage, #monsterImage {
+    max-width: 100%;
+    max-height: 150px;
+}
