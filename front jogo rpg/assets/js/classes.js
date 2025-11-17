@@ -11,7 +11,7 @@ class Character {
     }
 
     get life() {
-        return this._life <= 0 ? (0).toFixed(2) : this._life.toFixed(2)
+        return this._life <= 0 ? (0) : this._life
     }
 
     set life(newLife) {
@@ -202,11 +202,11 @@ class Stage {
     }
 
     update() {
-        this.fighter1El.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life} HP`
+        this.fighter1El.querySelector(".name").innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed(2)} HP`
         let f1pct = (this.fighter1.life / this.fighter1.maxLife) * 100
         this.fighter1El.querySelector(".bar").style.width = `${f1pct}%`
 
-        this.fighter2El.querySelector(".name").innerHTML = `${this.fighter2.name} - ${this.fighter2.life} HP`
+        this.fighter2El.querySelector(".name").innerHTML = `${this.fighter2.name} - ${this.fighter2.life.toFixed(2)} HP`
         let f2pct = (this.fighter2.life / this.fighter2.maxLife) * 100
         this.fighter2El.querySelector(".bar").style.width = `${f2pct}%`
     }
@@ -234,4 +234,5 @@ class Log {
             this.listEl.innerHTML += `<li class="${this.list[i].type}">${this.list[i].msg}</li>`;
         }
     }
+
 }
